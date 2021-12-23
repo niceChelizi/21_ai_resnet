@@ -22,8 +22,8 @@ from tensorbay.dataset import Dataset
 
 gas = GAS("Accesskey-1b824999e9e802fd1803665b992b48a4")
 dataset = Dataset("RP2K", gas)
-os.mkdir(“test”)
-os.mkdir(“work”)
+os.mkdir("test")
+os.mkdir("work")
 os.chdir("test")#
 segment = dataset["test"]
 a = segment[0]
