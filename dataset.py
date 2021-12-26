@@ -70,7 +70,7 @@ cfg = edict({
     'directory': './model_resnet',
     'save_checkpoint_steps': 10,
 })
-os.chdir("work")
+os.chdir("../work")
 def read_data(path, config, usage="train"):
     # 从目录中读取图像的源数据集。
     dataset = ds.ImageFolderDataset(path,
