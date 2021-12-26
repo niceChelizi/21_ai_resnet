@@ -47,7 +47,7 @@ for i in os.listdir():
     dic[i] = count
     count += 1
 
-os.chdir("data")#
+os.chdir("../data")#
 segment = dataset["train"]
 a = segment[0]
 Li = segment[0:100]
