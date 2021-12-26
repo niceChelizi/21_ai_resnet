@@ -47,6 +47,24 @@ for i in os.listdir():
     dic[i] = count
     count += 1
 
+os.chdir("data")#
+segment = dataset["train"]
+a = segment[0]
+Li = segment[0:100]
+for i in Li:
+    name = i.path
+    fp = i.open()
+    a = fp.read()
+    classification_category = i.label.classification.category
+    if os.path.exists(classification_category):
+        with open(classification_category+"/"+name,"wb") as f:
+            f.write(a)
+    else:
+        os.mkdir(classification_category)
+        with open(classification_category+"/"+name, "wb") as f:
+            f.write(a)
+ 
+    
 cfg = edict({
     'data_path': 'data',  # 训练数据集，如果是zip文件需要解压
     'test_path': 'test',  # 测试数据集，如果是zip文件需要解压
