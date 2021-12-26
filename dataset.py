@@ -23,7 +23,6 @@ from tensorbay.dataset import Dataset
 gas = GAS("Accesskey-7b4ca5d2a6e9ea5f3273c8506050e7ed")
 dataset = Dataset("RP2K", gas)
 os.mkdir("test")
-os.mkdir("work")
 os.mkdir("data")
 os.chdir("test")#
 segment = dataset["test"]
@@ -89,7 +88,7 @@ cfg = edict({
     'directory': './model_resnet',
     'save_checkpoint_steps': 10,
 })
-os.chdir("../work")
+os.chdir("..")
 def read_data(path, config, usage="train"):
     # 从目录中读取图像的源数据集。
     dataset = ds.ImageFolderDataset(path,
