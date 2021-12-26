@@ -24,6 +24,7 @@ gas = GAS("Accesskey-7b4ca5d2a6e9ea5f3273c8506050e7ed")
 dataset = Dataset("RP2K", gas)
 os.mkdir("test")
 os.mkdir("work")
+os.mkdir("data")
 os.chdir("test")#
 segment = dataset["test"]
 a = segment[0]
