@@ -1,6 +1,12 @@
-通过huaweicloud的modelArts在使用notebook的mindspore集成开发环境，具体配置为
-tensorflow1.15-mindspore1.3.0-cann5.0.2.1-ubuntu18.04-aarch6.4
-代码运行说明：
-在notebook中点击mindspore，得到.ipynb文件先输入!pip3 install tensorbay运行下载tensorbay sdk用于引用数据，
-将代码dataset,learningrate,train,eval依次复制到notebook中，notebook上运行。
+docker run -it -v /dev/shm:/dev/shm --runtime=nvidia swr.cn-south-1.myhuaweicloud.com/mindspore/mindspore-gpu-cuda10.1:1.5.0 /bin/bash
+pip install tensorbay
+pip install --upgrade pip
 
+sudo apt-get install git 
+git clone  https://github.com/niceChelizi/21_ai_resnet.git
+
+pip install matplotlib
+pip install easydict 
+cd copy1
+python dataPre.py
+python resNet50.py
